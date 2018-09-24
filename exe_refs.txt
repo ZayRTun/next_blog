@@ -113,7 +113,7 @@ dd(request('title'));
 dd(request(['title', 'body']));
 
 
-EXE Refs : Form Validation
+EXE Refs : Laravel Mix and the Front-end
 
 
 

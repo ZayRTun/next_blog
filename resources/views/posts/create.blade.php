@@ -19,10 +19,15 @@
                 <label for="body">Body:</label>
                 <textarea name="body" class="form-control" id="body" rows="3"></textarea>
             </div>
-
-            <button type="submit" class="btn btn-primary">Publish</button>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Publish</button>
+            </div>
 
         </form>
 
+        {{--Display Errors--}}
+        @include('layouts.errors')
+
     </div>
 @endsection
+
