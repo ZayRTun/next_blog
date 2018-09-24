@@ -1,0 +1,120 @@
+Laravel 5.4: Specified key was too long error
+//dit your AppServiceProvider.php file
+-
+use Illuminate\Support\Facades\Schema;
+
+public function boot()
+{
+    Schema::defaultStringLength(191);
+}
+
+
+
+
+// Bash Commands for Laravel
+
+- composer create-project laravel/laravel lsapp // create laravel project lsapp
+
+- npm run dev // to compile scss
+
+// create a fresh Laravel installation in the directory you specify
+- laravel new blog // project name blog
+
+//install Laravel by issuing the Composer create-project 
+- composer create-project --prefer-dist laravel/laravel blog
+
+// //install Laravel specific version by issuing the Composer create-project 
+- composer create-project --prefer-dist laravel/laravel blog "5.4.*"
+
+--- Artisan
+
+- php artisan // will list all the artisan commands
+
+- php artisan help make:migration // will display all info for 
+
+-  php artisan make:migration create_tasks_table --create=tasks // with code to create a table
+
+	if (error){
+
+include(C:\wamp64\www\blog\vendor\composer/../../database/migrations/2018_09_11_09
+  5535_create_tasks_table.php): failed to open stream: No such file or directory
+
+} 
+
+---------Error--------
+- composer dump-autoload
+
+
+- The Run - php artisan make:migration create_tasks_table --create=tasks 
+
+// for mistakes in list migrations 
+- php artisan migrate:refresh // will reupdate the table
+
+// DB queries
+- $tasks = DB::table('tasks')->get();
+
+
+// Local Development Server
+- php artisan serve
+
+-------Using Eloquent
+- php artisan tinker // to bootup laravel shell to tinker with the app
+----Withing the Shell
+- App\Task::all() // will return all database datas
+- App\Task::where('id', '>=', 2)->get();
+- App\Task::pluck('body'); // return only the body/elm from the db
+- App\Task::pluck('body')->first(); // ret the 1st record
+- App\Task::pluck('body')->last(); // ret the last record
+- App\Task::where('completed', 0)->get();
+
+// short to make a model and create migration / create table
+
+class Task extends Model
+{
+    public function scopeIncomplete($query)
+    {
+        return $query->where('completed', 0);
+    }
+}
+
+//------Route Model Binding--------//
+
+	//Class Method//
+
+public function show(Task $task) // LV detect and searchs for id passed in
+    {
+        return view('tasks.show', compact('task'));
+    }
+
+
+//--------Form Request Data and CSRF---------//
+
+GET	/posts			// disp * posts
+GET	/posts/create		// disp a form 2 create post
+
+POST	/posts			// create post
+
+GET	/posts/{id}/edit	// disp a form with post for edit
+PATCH	/posts/{id}		// patch to submit the edited form
+
+GET	/posts/{id}		// disp a single specific post
+
+DELETE	/posts/{id}		// reqst to delete a specific post
+
+// depending on the request type the server directs accordingly 
+
+
+==========================================
+
+-----------HELPER FUNCTION-------
+
+dd(request()->all()); // Gets all posted data and dumps
+dd(request('title'));
+dd(request(['title', 'body']));
+
+
+EXE Refs : Form Validation
+
+
+
+
