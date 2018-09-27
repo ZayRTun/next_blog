@@ -114,6 +114,7 @@ dd(request(['title', 'body']));
 
 
 EXE Refs : Laravel Mix and the Front-end
+EXE Refs : Rapid Authentication and Configuration
 
 
 
