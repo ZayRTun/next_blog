@@ -20,17 +20,17 @@ public function boot()
 // create a fresh Laravel installation in the directory you specify
 - laravel new blog // project name blog
 
-//install Laravel by issuing the Composer create-project 
+//install Laravel by issuing the Composer create-project
 - composer create-project --prefer-dist laravel/laravel blog
 
-// //install Laravel specific version by issuing the Composer create-project 
+// //install Laravel specific version by issuing the Composer create-project
 - composer create-project --prefer-dist laravel/laravel blog "5.4.*"
 
 --- Artisan
 
 - php artisan // will list all the artisan commands
 
-- php artisan help make:migration // will display all info for 
+- php artisan help make:migration // will display all info for
 
 -  php artisan make:migration create_tasks_table --create=tasks // with code to create a table
 
@@ -39,15 +39,15 @@ public function boot()
 include(C:\wamp64\www\blog\vendor\composer/../../database/migrations/2018_09_11_09
   5535_create_tasks_table.php): failed to open stream: No such file or directory
 
-} 
+}
 
 ---------Error--------
 - composer dump-autoload
 
 
-- The Run - php artisan make:migration create_tasks_table --create=tasks 
+- The Run - php artisan make:migration create_tasks_table --create=tasks
 
-// for mistakes in list migrations 
+// for mistakes in list migrations
 - php artisan migrate:refresh // will reupdate the table
 
 // DB queries
@@ -101,7 +101,7 @@ GET	/posts/{id}		// disp a single specific post
 
 DELETE	/posts/{id}		// reqst to delete a specific post
 
-// depending on the request type the server directs accordingly 
+// depending on the request type the server directs accordingly
 
 
 ==========================================
@@ -115,7 +115,4 @@ dd(request(['title', 'body']));
 
 EXE Refs : Laravel Mix and the Front-end
 EXE Refs : Rapid Authentication and Configuration
-
-
-
-
+EXE Refs : Archives
