@@ -116,3 +116,12 @@ dd(request(['title', 'body']));
 EXE Refs : Laravel Mix and the Front-end
 EXE Refs : Rapid Authentication and Configuration
 EXE Refs : Archives
+EXE Refs : View Composers
+
+----Revisit this again later----
+EXE Refs : The Service Container
+EXE Refs : Service Providers Explained
+--------
+
+EXE Refs : Markdown Mail
+
